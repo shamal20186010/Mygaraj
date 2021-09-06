@@ -24,13 +24,15 @@ if (isset($_SESSION ["is_login"])) {
             header("Location:/../Mygaraj.lk/index.php");
             exit();
         } else {
-            $sql = "SELECT `password` FROM users WHERE email='" . $inEmail . "'";
+            $sql = "SELECT password,id_user FROM users WHERE email='" . $inEmail . "'";
 
             $result = mysqli_query($connection, $sql);
             $row = $result->fetch_assoc();
             echo $inPassword == $row;
             if ($inPassword == $row["password"]){
                  $_SESSION["name"] = $inEmail;
+                 $id = "";
+               $_SESSION['userid'] = $row['id_user'];
             $_SESSION["is_login"] = true;
             header("Location:/../Mygaraj.lk/index.php");
             exit();

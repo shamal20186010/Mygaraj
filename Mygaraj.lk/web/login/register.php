@@ -1,5 +1,15 @@
+<?php
+session_start();
 
-<!doctype html>
+if (isset($_SESSION["is_login"])) {
+
+    if ($_SESSION["is_login"]) {
+
+        header("Location:/../Mygaraj.lk/index.php");
+    }
+}
+?>
+
 <title>Signup</title>
 <html lang="en">
 
@@ -10,7 +20,7 @@
     <body class="text-center">
         <main class="form-signin">
             <form style="margin-top:95px;"method="post" action="/Mygaraj.lk/Sources/doRegister.php">
-                <h1 class="h3 mb-3 fw-normal">Please sign in</h1><br>
+                <h1 class="h3 mb-3 fw-normal">Please sign up</h1><br>
                 <center>   <label for="inputFirstName" class="visually-hidden">First name</label>
                 <input style="width: 500px;"type="text" id="inputFirstName" class="form-control" placeholder="First name" name="inputFirstName" required autofocus>
                 <label for="inputLastName" class="visually-hidden">Last name</label>

@@ -5,22 +5,22 @@ include '../web/common/heder.php';
 <html lang="en">
     <head>
         <title>Orders</title>
-        
-    
-              
+
+
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      
+
     </head>
     <body style="background-color: #cccccc;">
 
         <div class="container"style="background-color: #ffffff;margin-top: 20px;">
             <form method="POST" action=""><br>
-               
+
                 <h3>Address</h3>
-                    <label for="productName" class="visually-hidden">Address</label>
-                       <input type="text" id="productName" name="productName" class="form-control" style="width:450px;padding-right:50px;"required autofocus><br><br>
-             <hr class="my-4">
+                <label for="productName" class="visually-hidden">Address</label>
+                <input type="text" id="productName" name="productName" class="form-control" style="width:450px;padding-right:50px;"required autofocus><br><br>
+                <hr class="my-4">
                 <form>
                     <h2>Order Iterm</h2>
                     <table class="table table-hover">
@@ -31,7 +31,7 @@ include '../web/common/heder.php';
                                 <th>Iterm name</th>
                                 <th>Qty</th>
                                 <th>Price</th>
-                            </tr>
+                            </tr>  
                         </thead>
                     </table>
                 </form><br><br><br><br>
